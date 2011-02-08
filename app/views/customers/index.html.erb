@@ -1,0 +1,35 @@
+<h1>Listing customers</h1>
+
+<table cellpadding="0" cellspacing="0">
+  <tr>
+    <th>Row ID</th>
+    <th>Field1</th>
+    <th>Field2</th>
+    <th>Field3</th>
+    <th>Field4</th>
+    <th>Field5</th>
+<% if false %>
+    <th></th>
+    <th></th>
+<% end %>
+  </tr>
+
+<% @customers.each do |customer| %>
+  <tr class="<%= cycle('', 'silver') %>">
+    <td><%= customer.id %></td>
+    <td><%= customer.field1 %></td>
+    <td><%= customer.field2 %></td>
+    <td><%= customer.field3 %></td>
+    <td><%= customer.field4 %></td>
+    <td><%= customer.field5 %></td>
+<% if false %>
+    <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
+    <td><%= link_to 'Destroy', customer, :confirm => 'Are you sure?', :method => :delete %></td>
+<% end %>
+  </tr>
+<% end %>
+</table>
+<%= will_paginate(@customers) %>
+<br />
+
+<%= link_to 'Import another file', '/' %>

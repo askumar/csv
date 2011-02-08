@@ -1,0 +1,4 @@
+<h2>Click on a link to import that file into DB</h2>
+<% @files.each do |fn| %>
+  <%= link_to fn, import_csv_path(fn) %><br/>
+<% end %>

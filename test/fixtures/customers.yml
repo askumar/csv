@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  field1: 2011-02-08
+  field2: 1
+  field3: 1
+  field4: MyString
+  field5: 1
+
+two:
+  field1: 2011-02-08
+  field2: 1
+  field3: 1
+  field4: MyString
+  field5: 1
