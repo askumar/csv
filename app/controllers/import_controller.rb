@@ -11,6 +11,7 @@ class ImportController < ApplicationController
     CSV.foreach(Rails.public_path + '/csv_files/' + @file) do |row|
       hash = {}
       row.each_with_index { |data, i| hash["field#{i+1}".to_sym] = data }
+      #puts hash.inspect
       Customer.create(hash)
     end
     redirect_to customers_path
